@@ -88,7 +88,7 @@ class PUBGManagerTest extends TestCase
     public function testGetMatchArray(): void
     {
         $token = 'token';
-        $data  = $this->getTestData('tests/example/match.json');
+        $data  = $this->getTestData('../tests/example/match.json');
 
         $client  = $this->mockClient($data, 200);
         $manager = new PUBGManager($client, $token);
@@ -99,7 +99,7 @@ class PUBGManagerTest extends TestCase
     public function testGetPlayersArray(): void
     {
         $token = 'token';
-        $data  = $this->getTestData('tests/example/players.json');
+        $data  = $this->getTestData('../tests/example/players.json');
 
         $client  = $this->mockClient($data, 200);
         $manager = new PUBGManager($client, $token);
@@ -110,7 +110,7 @@ class PUBGManagerTest extends TestCase
     public function testGetTelemetryArray(): void
     {
         $token = 'token';
-        $data  = $this->getTestData('tests/example/telemetry.json');
+        $data  = $this->getTestData('../tests/example/telemetry.json');
 
         $client  = $this->mockClient($data, 200);
         $manager = new PUBGManager($client, $token);
@@ -121,7 +121,7 @@ class PUBGManagerTest extends TestCase
     public function testGetSeasons(): void
     {
         $token = 'token';
-        $data  = $this->getTestData('tests/example/seasons.json');
+        $data  = $this->getTestData('../tests/example/seasons.json');
 
         $client  = $this->mockClient($data, 200);
         $manager = new PUBGManager($client, $token);
@@ -132,7 +132,7 @@ class PUBGManagerTest extends TestCase
     public function testGetSeasonDataForPlayer(): void
     {
         $token = 'token';
-        $data  = $this->getTestData('tests/example/season_for_player.json');
+        $data  = $this->getTestData('../tests/example/season_for_player.json');
 
         $client  = $this->mockClient($data, 200);
         $manager = new PUBGManager($client, $token);
@@ -143,7 +143,7 @@ class PUBGManagerTest extends TestCase
     public function testGetStatus(): void
     {
         $token = 'token';
-        $data  = $this->getTestData('tests/example/status.json');
+        $data  = $this->getTestData('../tests/example/status.json');
 
         $client  = $this->mockClient($data, 200);
         $manager = new PUBGManager($client, $token);
@@ -154,7 +154,7 @@ class PUBGManagerTest extends TestCase
     public function testGetSamples(): void
     {
         $token = 'token';
-        $data  = $this->getTestData('tests/example/samples.json');
+        $data  = $this->getTestData('../tests/example/samples.json');
 
         $client  = $this->mockClient($data, 200);
         $manager = new PUBGManager($client, $token);
@@ -165,7 +165,7 @@ class PUBGManagerTest extends TestCase
     public function testGetTournaments(): void
     {
         $token = 'token';
-        $data  = $this->getTestData('tests/example/tournaments.json');
+        $data  = $this->getTestData('../tests/example/tournaments.json');
         $client  = $this->mockClient($data, 200);
         $manager = new PUBGManager($client, $token);
         $match   = $manager->getTournaments();
@@ -175,7 +175,7 @@ class PUBGManagerTest extends TestCase
     public function testGetTournament(): void
     {
         $token = 'token';
-        $data  = $this->getTestData('tests/example/tournament.json');
+        $data  = $this->getTestData('../tests/example/tournament.json');
         $client  = $this->mockClient($data, 200);
         $manager = new PUBGManager($client, $token);
         $match   = $manager->getTournament('cis-pgiq18');
@@ -185,7 +185,7 @@ class PUBGManagerTest extends TestCase
     public function testGetLeaderboard(): void
     {
         $token = 'token';
-        $data  = $this->getTestData('tests/example/leaderboards.json');
+        $data  = $this->getTestData('../tests/example/leaderboards.json');
         $client  = $this->mockClient($data, 200);
         $manager = new PUBGManager($client, $token);
         $match   = $manager->getLeaderboard('steam', 'duo');
@@ -195,7 +195,7 @@ class PUBGManagerTest extends TestCase
     public function testGetMatchDTO(): void
     {
         $token = 'token';
-        $data  = $this->getTestData('tests/example/match.json');
+        $data  = $this->getTestData('../tests/example/match.json');
 
         $client  = $this->mockClient($data, 200);
         $manager = new PUBGManager($client, $token);
@@ -207,7 +207,7 @@ class PUBGManagerTest extends TestCase
     public function testGetPlayersDTO(): void
     {
         $token = 'token';
-        $data  = $this->getTestData('tests/example/players.json');
+        $data  = $this->getTestData('../tests/example/players.json');
 
         $client  = $this->mockClient($data, 200);
         $manager = new PUBGManager($client, $token);
@@ -219,7 +219,7 @@ class PUBGManagerTest extends TestCase
     public function testGetPlayerDTO(): void
     {
         $token = 'token';
-        $data  = $this->getTestData('tests/example/player.json');
+        $data  = $this->getTestData('../tests/example/player.json');
 
         $client  = $this->mockClient($data, 200);
         $manager = new PUBGManager($client, $token);
@@ -231,7 +231,7 @@ class PUBGManagerTest extends TestCase
     public function testGetStatusDTO(): void
     {
         $token = 'token';
-        $data  = $this->getTestData('tests/example/status.json');
+        $data  = $this->getTestData('../tests/example/status.json');
 
         $client  = $this->mockClient($data, 200);
         $manager = new PUBGManager($client, $token);
@@ -243,13 +243,13 @@ class PUBGManagerTest extends TestCase
     public function testGetTelemetryDTO(): void
     {
         $token = 'token';
-        $data  = $this->getTestData('tests/example/telemetry.json');
+        $data  = $this->getTestData('../tests/example/telemetry.json');
 
         $client         = $this->mockClient($data, 200);
         $manager        = new PUBGManager($client, $token);
         $status         = $manager->getTelemetry('https://api.playbattlegrounds.com/shards/pc-eu/matches/abe08f7e-3add-4fd6-9bcd-4aff88fc7adf');
         $objArray       = $manager->hydrate($status, PUBGManager::HYDRATE_TELEMETRY);
-        $telemetryArray = $this->jsonDecodeToArray($this->getTestData('tests/example/telemetry.json'));
+        $telemetryArray = $this->jsonDecodeToArray($this->getTestData('../tests/example/telemetry.json'));
 
         $counter = 0;
         foreach ($objArray->events as $obj) {
@@ -350,7 +350,7 @@ class PUBGManagerTest extends TestCase
     public function testGetSamplesDTO(): void
     {
         $token = 'token';
-        $data  = $this->getTestData('tests/example/samples.json');
+        $data  = $this->getTestData('../tests/example/samples.json');
 
         $client  = $this->mockClient($data, 200);
         $manager = new PUBGManager($client, $token);
@@ -361,7 +361,7 @@ class PUBGManagerTest extends TestCase
 
     public function testTelemetryDTO(): void
     {
-        $data = $this->jsonDecodeToArray($this->getTestData('tests/example/telemetry.json'));
+        $data = $this->jsonDecodeToArray($this->getTestData('../tests/example/telemetry.json'));
         foreach ($data as $item) {
             switch ($item["_T"]) {
                 case "LogArmorDestroy":
