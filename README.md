@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 PHPPUBG - wrapper for PUBG Developer API
 =======================
 [![Total Downloads](https://poser.pugx.org/lifeformwp/php-pubg/downloads)](https://packagist.org/packages/lifeformwp/php-pubg)
@@ -52,3 +53,7 @@ WIP
 
 * Documentation
 * More flexible behaviour
+=======
+# PUBG-TOP
+Top Ranking PUBG
+>>>>>>> 51e0cd88cad44756862b6e93637bcfcea16d51f7
