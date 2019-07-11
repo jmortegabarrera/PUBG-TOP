@@ -8,9 +8,15 @@ $class = new Lifeformwp\PHPPUBG\PUBGManager($client, $token);
 //$data = $class->getMatch('pc-eu', 'abe08f7e-3add-4fd6-9bcd-4aff88fc7adf'); //returns array
 //$matchObject = $class->hydrate($data, \Lifeformwp\PHPPUBG\PUBGManager::HYDRATE_MATCH); //returns Lifeformwp\PHPPUBG\DTO\Match object
 
-echo "<h1>TOP</h1>";
 $listado=['KeTeMeTo','Nomemate'];
 $listado=$class->getPlayers('pc-eu',$listado);
+
+$seasons=$class->getSeasons('pc-eu');
+foreach ($seasons['data'] as $season){
+    if ($season['attributes']['isCurrentSeason']==true){
+        $seasonid=$season['id'];
+    }
+}
 
 foreach ($listado['data'] as $item){
     $id[]=$item['id'];
@@ -18,7 +24,7 @@ foreach ($listado['data'] as $item){
 
 foreach ($id as $item) {
     $data=$class->getPlayer('pc-eu',$item);
-    $estadisticas=$class->getSeasonDataForPlayer('pc-eu',$item,'division.bro.official.2019-05');
+    $estadisticas=$class->getSeasonDataForPlayer('pc-eu',$item,$seasonid);
     var_dump($data['data']['attributes']['name']);
     var_dump($estadisticas['data']['attributes']['gameModeStats']['squad-fpp']);
 }
