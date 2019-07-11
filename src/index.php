@@ -8,7 +8,7 @@ $class = new Lifeformwp\PHPPUBG\PUBGManager($client, $token);
 //$data = $class->getMatch('pc-eu', 'abe08f7e-3add-4fd6-9bcd-4aff88fc7adf'); //returns array
 //$matchObject = $class->hydrate($data, \Lifeformwp\PHPPUBG\PUBGManager::HYDRATE_MATCH); //returns Lifeformwp\PHPPUBG\DTO\Match object
 
-
+echo "<h1>TOP</h1>";
 $listado=['KeTeMeTo','Nomemate'];
 $listado=$class->getPlayers('pc-eu',$listado);
 
