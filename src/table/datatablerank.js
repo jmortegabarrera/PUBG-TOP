@@ -6,6 +6,7 @@ $(document).ready(function() {
             'url': 'table/datos.php',
         },
         'columns' :[
+            {data: 'nombre'},
             {data: 'atributo.assists'},
             {data: 'atributo.bestRankPoint'},
             {data: 'atributo.boosts'},
@@ -42,7 +43,6 @@ $(document).ready(function() {
             {data: 'atributo.weeklyWins'},
             {data: 'atributo.winPoints'},
             {data: 'atributo.wins'},
-            {data: 'nombre'},
         ]
     } );
 
