@@ -45,7 +45,4 @@ $(document).ready(function() {
             {data: 'atributo.wins'},
         ]
     } );
-
-
-
 } );
