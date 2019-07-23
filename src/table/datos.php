@@ -103,6 +103,7 @@ foreach ($id as $item) {
                  walkDistance=$walkDistance,weaponsAcquired=$weaponsAcquired,weeklyKills=$weeklyKills,weeklyWins=$weeklyWins,winPoints=$winPoints,wins=$wins,
                  seasonid='$seasonid' WHERE CodUsuario=$idrank";
         $result = mysqli_query($conection, $query);
+        var_dump($result);
     }
     else{
         $query="INSERT INTO rank VALUES (0,'$nombre',$assist,$bestRankPoint,$boosts,$dBNOs,$dailyKills,$dailyWins,'$damageDealt',$days,$headshotKills,
